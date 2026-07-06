@@ -6,8 +6,6 @@ class Calculator {
     };
 
     clear() {
-        // this.currentOperandElement.innerText = '';
-        // this.previousOperandElement.innerText = '';
         this.currentOperand = '';
         this.previousOperand = '';
         this.operation = undefined;
