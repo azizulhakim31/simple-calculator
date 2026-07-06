@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, rgb(163, 163, 236), rgb(109, 219, 109));
+}
+
+.calculator-body {
+    height: 630px;
+    width: 430px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #8a8b89;
+    border: 10px outset #969797;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(150px, auto) repeat(5, 90px);
+}
+
+.calculator-grid>button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 5px outset white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: 3px;
+}
+
+.calculator-grid>button:hover {
+    background-color: rgba(241, 207, 163, 0.9);
+    border: 5px outset rgba(247, 201, 174, 0.719);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: 5px solid white;
+    border-right: 5px outset white;
+    margin-bottom: 10px;
+
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: rgba(255, 255, 255, 1);
+    font-size: 3rem;
+}
+
+button[data-delete]:hover {
+    background-color: rgb(249, 96, 96);
+    border: 5px outset rgb(245, 131, 131);
+    color: white;
+}
+
+button[data-clear]:hover {
+    background-color: rgb(230, 242, 118);
+    border: 5px outset rgb(247, 247, 145);
+}
+
+button[data-equals]:hover {
+    background-color: rgb(132, 241, 131);
+    border: 5px outset rgb(147, 249, 145);
+}
+
+button[data-operation] {
+    background-color: rgba(241, 138, 48, 0.9);
+    border: 5px outset rgba(246, 165, 118, 0.719);
+    font-weight: bold;
+}
+
+button[data-operation]:hover {
+    background-color: rgba(253, 95, 3, 0.949);
+    border: 5px outset rgba(236, 108, 34, 0.932);
+    color: white;
+}
